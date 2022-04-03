@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class WeatherService {
     private final Map<Integer, Weather> weathers = new ConcurrentHashMap<>();
+
     {
         weathers.put(1, new Weather(1, "Msc", 20));
         weathers.put(2, new Weather(2, "SPb", 15));

@@ -37,7 +37,8 @@ public class WeatherControl {
         return weathers.findHottest();
     }
 
-    @GetMapping(value = "/cityGreatThen/{temperature}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @GetMapping(value = "/cityGreatThen/{temperature}", produces = MediaType.
+            TEXT_EVENT_STREAM_VALUE)
     public  Flux<Weather> getCityGreatThen(@PathVariable Integer temperature) {
         Flux<Weather> data = weathers.allCityGreatThen(temperature);
         Flux<Long> delay = Flux.interval(Duration.ofSeconds(3));
